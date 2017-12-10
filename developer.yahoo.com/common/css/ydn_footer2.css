@@ -1,0 +1,237 @@
+/* pure.css 4.2 */
+.pure-g-r {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+
+    /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+
+    /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
+
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+
+    /* IE10 uses display: flexbox */
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+.opera-only :-o-prefocus,
+.pure-g-r {
+    word-spacing: -0.43em;
+}
+.pure-form .pure-g {
+    margin: 0;
+}
+.pure-g.landing-promo {
+    margin: 0;
+}
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 100%;
+    color: #000;
+}
+
+/* End of pure.css */
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.pure-g-r [class *= "pure-u"] {
+    font-family: sans-serif;
+}
+
+.pure-g-r img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .pure-g-r > .pure-u,
+    .pure-g-r > [class *= "pure-u-"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pure-g-r > .pure-u,
+    .pure-g-r > [class *= "pure-u-"] {
+        width: 100%;
+    }
+    .pure-hidden-phone {
+        display: none;
+    }
+    .pure-visible-desktop {
+        display: none;
+    }
+}
+
+.pure-u-3-5, .pure-u-2-5 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.pure-u-3-5 {
+    width: 60%;
+    *width: 59.9690%;
+}
+
+.pure-u-2-5 {
+    width: 40%;
+    *width: 39.9690%;
+}
+
+/* footer */
+.footer {
+    margin-top:3px;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    border-width: 1px 0 1px 0;
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 1px;
+    width: 100%;
+}
+
+.footer .icons {
+    text-align: center;
+}
+.footer ul {
+    text-align: center;
+}
+
+.footer ul {
+    background-color: #FFFFFF;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 0 0 0.8em;
+    margin-top: 1em;
+}
+.footer li a {
+    font-size: 112%;
+    font-weight: 200;
+}
+.footer .links li {
+    display: inline-block;
+    padding: 0.1em 0.7em 0.2em;
+    height: 30px;
+}
+.footer .links .last {
+    border: none;
+}
+.footer .follow-us {
+    display: inline-block;
+    font-size: 70%;
+}
+.footer .follow-us span {
+    line-height: 3.5em;
+    display: none;
+}
+.footer .ydn-ext22 {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+}
+.footer .ydn-ext22 li {
+    display: inline-block;    
+    height: 47px;
+    border: none;
+}
+.footer .ydn-ext22 li a {
+    background: url("https://s.yimg.com/oo/ydn/image/sprite_footer.png") no-repeat rgba(0, 0, 0, 0);
+    display: inline-block;    
+    height: 50px;
+    margin: 0.8em 0.4em;
+    width: 50px;
+    background-size: 50px;
+}
+.footer li.ydn-ext-tb22 a {
+    background-position: 0 0;
+}
+.footer li.ydn-ext-fb22 a {
+    background-position: 0 -50px;
+}
+.footer li.ydn-ext-tw22 a {
+    background-position: 0 -100px;
+}
+.footer li.ydn-ext-gh22 a {
+    background-position: 0 -150px;
+}
+.footer li.ydn-ext-yt22 a {
+    background-position: 0 -200px;
+}
+
+.footer ul {
+    text-align: left;
+}
+.footer .icons {
+    text-align: right;
+}
+.footer .ydn-ext22 li a {
+    background: url("https://s.yimg.com/oo/ydn/image/sprite_footer.png") no-repeat rgba(0, 0, 0, 0);
+    height: 30px;
+    margin: 0.8em 0.4em;
+    width: 30px;
+    background-size: 30px;
+}
+.footer li.ydn-ext-tb22 a {
+    background-position: 0 0;
+}
+.footer li.ydn-ext-fb22 a {
+    background-position: 0 -30px;
+}
+.footer li.ydn-ext-tw22 a {
+    background-position: 0 -60px;
+}
+.footer li.ydn-ext-gh22 a {
+    background-position: 0 -90px;
+}
+.footer li.ydn-ext-yt22 a {
+    background-position: 0 -120px;
+}
+.footer .ydn-ext22 {
+    margin-right: 2em;
+}
